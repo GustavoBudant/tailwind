@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escola de Informática - Layout Responsivo</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#383838] min-h-screen text-white flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="bg-[#444444] px-6 py-6 lg:py-8 border-b border-zinc-700/50">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 lg:gap-8">
+      
+      <!-- LOGO -->
+      <div class="text-xl md:text-2xl font-bold tracking-tight text-white flex items-center gap-1">
+        <span>🏫</span>
+        <span>ESCOLA DE INFORMÁTICA</span>
+        <span>📘</span>
+      </div>
+
+      <!-- NAVIGATION LINKS -->
+      <nav class="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-sm md:text-lg font-medium text-gray-200">
+        <a href="#" class="hover:text-cyan-400 transition-colors">Home</a>
+        <a href="#" class="hover:text-cyan-400 transition-colors">Curso de HTML</a>
+        <a href="#" class="hover:text-cyan-400 transition-colors">Curso CSS</a>
+        <a href="#" class="hover:text-cyan-400 transition-colors">Curso JS</a>
+        <a href="#" class="hover:text-cyan-400 transition-colors">Contato</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="w-full flex-grow flex flex-col">
+
+    <!-- SECTION A & B -->
+    <!-- Mobile/Tablet: Stacked vertically, dark background -->
+    <!-- Desktop (lg): 2 columns / flex row with cyan background -->
+    <div class="w-full text-center text-white lg:text-black lg:bg-[#00ffff] font-semibold text-lg md:text-xl">
+      <div class="flex flex-col lg:flex-row w-full items-center justify-center">
+        <div class="w-full py-4 lg:py-6 text-center">a</div>
+        <div class="w-full py-4 lg:py-6 text-center lg:text-right lg:pr-32">b</div>
+      </div>
+    </div>
+
+    <!-- SECTION C, D, F -->
+    <!-- Mobile: Stacked vertically -->
+    <!-- Tablet (md): 3 columns row with emerald background (bg-[#0f966c]) and white text -->
+    <!-- Desktop (lg): 3 columns row with light mint background (bg-[#80ffd4]) and white text -->
+    <div class="w-full text-center font-semibold text-lg md:text-xl text-white md:bg-[#0f966c] lg:bg-[#80ffd4] lg:text-white">
+      <div class="grid grid-cols-1 md:grid-cols-3 w-full items-center">
+        <div class="py-4 lg:py-6">c</div>
+        <div class="py-4 lg:py-6">d</div>
+        <div class="py-4 lg:py-6">f</div>
+      </div>
+    </div>
+
+    <!-- SECTION G & PURPLE BLOCK -->
+    <!-- Mobile: 'g' centered with dark background -->
+    <!-- Tablet (md): 'g' full width with purple background -->
+    <!-- Desktop (lg): 'g' split into small purple block (left) and large red block (right) -->
+    <div class="w-full text-center font-semibold text-lg md:text-xl text-white my-auto lg:my-8">
+      <div class="w-full flex flex-col md:flex-row items-center justify-center">
+        
+        <!-- Purple Block (Desktop only visible as side-block, Tablet as full line) -->
+        <div class="hidden lg:block w-[10%] bg-[#8b00ff] py-6">&nbsp;</div>
+        
+        <!-- Main 'g' Block -->
+        <div class="w-full lg:w-[90%] py-4 lg:py-6 bg-transparent md:bg-[#8b00ff] lg:bg-[#ff0000]">
+          g
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="w-full py-8 bg-[#383838]"></footer>
+
+</body>
+</html>
