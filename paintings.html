@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paintings</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{
+    --bg:#f7f7f8; --card:#ffffff; --text:#1a1a1a; --muted:#8a8a8f;
+    --brand:#e6314f; --dark:#1c1c1f; --line:#e8e8ea;
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  html{scroll-padding-top:env(safe-area-inset-top,0px);}
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#121214; --card:#1b1b1e; --text:#f2f2f2; --muted:#9a9aa0; --line:#2b2b2f;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#121214; --card:#1b1b1e; --text:#f2f2f2; --muted:#9a9aa0; --line:#2b2b2f;
+  }
+  body{background:var(--bg); color:var(--text); font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;}
+  .card{background:var(--card);}
+  .divider{border-color:var(--line);}
+  .muted{color:var(--muted);}
+  img{display:block;}
+  .artwork{width:100%;height:auto;aspect-ratio:341 / 237;object-fit:cover;}
+  .blog-artwork{width:100%;height:auto;aspect-ratio:341 / 160;object-fit:cover;border-radius:0.75rem;}
+</style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="card text-center pt-10 pb-0">
+    <h1 class="text-2xl font-bold tracking-wide">Paintings</h1>
+  </header>
+
+  <!-- Hero banner -->
+  <div class="overflow-hidden bg-[#b8e3ea]">
+    <img src="img/header.png" alt="Artista pintando uma obra" class="w-full h-auto">
+  </div>
+
+  <!-- Feature blocks -->
+  <section class="card">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-3">
+
+        <div class="text-center py-10 lg:px-6">
+          <img src="img/icon1.svg" alt="" class="block mx-auto mb-4 h-16 w-auto">
+          <h3 class="font-bold text-lg mb-2">Ipsum consequat</h3>
+          <p class="muted text-sm max-w-xs mx-auto">Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+        </div>
+        <hr class="divider lg:hidden">
+
+        <div class="text-center py-10 lg:px-6 lg:border-l divider">
+          <img src="img/icon2.svg" alt="" class="block mx-auto mb-4 h-16 w-auto">
+          <h3 class="font-bold text-lg mb-2">Magna etiam dolor</h3>
+          <p class="muted text-sm max-w-xs mx-auto">Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+        </div>
+        <hr class="divider lg:hidden">
+
+        <div class="text-center py-10 lg:px-6 lg:border-l divider">
+          <img src="img/icon3.svg" alt="" class="block mx-auto mb-4 h-16 w-auto">
+          <h3 class="font-bold text-lg mb-2">Tempus adipiscing</h3>
+          <p class="muted text-sm max-w-xs mx-auto">Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+        </div>
+
+      </div>
+
+      <div class="flex flex-col gap-3 pb-10 lg:flex-row lg:justify-center">
+        <button class="w-full lg:w-48 py-3 rounded font-semibold text-white text-sm" style="background:var(--brand)">Get Started</button>
+        <button class="w-full lg:w-48 py-3 rounded font-semibold text-white text-sm" style="background:var(--dark)">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="py-10 px-6" style="background:var(--bg)">
+    <h2 class="text-center font-bold tracking-wide mb-8">My Portfolio</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- item template x6 -->
+      <article class="card rounded overflow-hidden shadow-sm flex h-full flex-col">
+        <img src="img/pic02.svg" alt="Ipsum feugiat et dolor" class="artwork" loading="lazy">
+        <div class="p-5 flex flex-1 flex-col">
+          <h3 class="font-bold mb-2">Ipsum feugiat et dolor</h3>
+          <p class="muted text-sm mb-4 flex-1">Lorem ipsum dolor sit amet sit veroeros sed blandit adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+          <button class="w-full mt-auto py-2.5 rounded text-white text-sm font-semibold" style="background:var(--dark)">Find out more</button>
+        </div>
+      </article>
+
+      <article class="card rounded overflow-hidden shadow-sm flex h-full flex-col">
+        <img src="img/pic03.svg" alt="Sed etiam lorem nulla" class="artwork" loading="lazy">
+        <div class="p-5 flex flex-1 flex-col">
+          <h3 class="font-bold mb-2">Sed etiam lorem nulla</h3>
+          <p class="muted text-sm mb-4 flex-1">Lorem ipsum dolor sit amet sit veroeros sed blandit consequat veroeros lorem dolore ipsum lorem dolore.</p>
+          <button class="w-full mt-auto py-2.5 rounded text-white text-sm font-semibold" style="background:var(--dark)">Find out more</button>
+        </div>
+      </article>
+
+      <article class="card rounded overflow-hidden shadow-sm flex h-full flex-col">
+        <img src="img/pic04.svg" alt="Consequat et tempus" class="artwork" loading="lazy">
+        <div class="p-5 flex flex-1 flex-col">
+          <h3 class="font-bold mb-2">Consequat et tempus</h3>
+          <p class="muted text-sm mb-4 flex-1">Lorem ipsum dolor sit amet sit veroeros sed blandit consequat veroeros lorem dolore ipsum lorem dolore.</p>
+          <button class="w-full mt-auto py-2.5 rounded text-white text-sm font-semibold" style="background:var(--dark)">Find out more</button>
+        </div>
+      </article>
+
+      <article class="card rounded overflow-hidden shadow-sm flex h-full flex-col">
+        <img src="img/pic05.svg" alt="Blandit sed adipiscing" class="artwork" loading="lazy">
+        <div class="p-5 flex flex-1 flex-col">
+          <h3 class="font-bold mb-2">Blandit sed adipiscing</h3>
+          <p class="muted text-sm mb-4 flex-1">Lorem ipsum dolor sit amet sit veroeros sed blandit consequat veroeros lorem dolore ipsum lorem dolore.</p>
+          <button class="w-full mt-auto py-2.5 rounded text-white text-sm font-semibold" style="background:var(--dark)">Find out more</button>
+        </div>
+      </article>
+
+      <article class="card rounded overflow-hidden shadow-sm flex h-full flex-col">
+        <img src="img/pic06.svg" alt="Etiam nisl consequat" class="artwork" loading="lazy">
+        <div class="p-5 flex flex-1 flex-col">
+          <h3 class="font-bold mb-2">Etiam nisl consequat</h3>
+          <p class="muted text-sm mb-4 flex-1">Lorem ipsum dolor sit amet sit veroeros sed blandit consequat veroeros lorem dolore ipsum lorem dolore.</p>
+          <button class="w-full mt-auto py-2.5 rounded text-white text-sm font-semibold" style="background:var(--dark)">Find out more</button>
+        </div>
+      </article>
+
+      <article class="card rounded overflow-hidden shadow-sm flex h-full flex-col">
+        <img src="img/pic07.svg" alt="Dolore nisl feugiat" class="artwork" loading="lazy">
+        <div class="p-5 flex flex-1 flex-col">
+          <h3 class="font-bold mb-2">Dolore nisl feugiat</h3>
+          <p class="muted text-sm mb-4 flex-1">Lorem ipsum dolor sit amet sit veroeros sed blandit consequat veroeros lorem dolore ipsum lorem dolore.</p>
+          <button class="w-full mt-auto py-2.5 rounded text-white text-sm font-semibold" style="background:var(--dark)">Find out more</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="card py-10 px-6">
+    <h2 class="text-center font-bold tracking-wide mb-8">The Blog</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <article class="flex h-full flex-col">
+        <img src="img/pic08.svg" alt="Magna tempus consequat" class="blog-artwork" loading="lazy">
+        <h3 class="font-bold mb-1">Magna tempus consequat</h3>
+        <p class="muted text-xs italic mb-3">Posted 45 minutes ago</p>
+        <p class="muted text-sm mb-4 flex-1">Lorem ipsum dolor sit amet sit veroeros sed blandit consequat veroeros et feugiat phasellus tempus hendrerit, tortor mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit.</p>
+        <div class="flex flex-col gap-3 lg:flex-row">
+          <button class="w-full flex-1 py-2.5 rounded text-white text-sm font-semibold" style="background:var(--brand)">Continue Reading</button>
+          <button class="w-full flex-1 py-2.5 rounded text-white text-sm font-semibold" style="background:var(--dark)">33 comments</button>
+        </div>
+      </article>
+
+      <article class="flex h-full flex-col">
+        <img src="img/pic09.svg" alt="Aptent veroeros aliquam" class="blog-artwork" loading="lazy">
+        <h3 class="font-bold mb-1">Aptent veroeros aliquam</h3>
+        <p class="muted text-xs italic mb-3">Posted 45 minutes ago</p>
+        <p class="muted text-sm mb-4 flex-1">Lorem ipsum dolor sit amet sit veroeros sed blandit consequat veroeros et feugiat phasellus tempus hendrerit, tortor mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit.</p>
+        <div class="flex flex-col gap-3 lg:flex-row">
+          <button class="w-full flex-1 py-2.5 rounded text-white text-sm font-semibold" style="background:var(--brand)">Continue Reading</button>
+          <button class="w-full flex-1 py-2.5 rounded text-white text-sm font-semibold" style="background:var(--dark)">33 comments</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 px-6 text-xs" style="background:var(--dark); color:#cfcfd2; padding-bottom:calc(env(safe-area-inset-bottom,0px) + 1.5rem)">
+    © Untitled. All rights reserved. &nbsp; Design: <a href="#" class="underline">ALUNOS DE WEB</a>
+  </footer>
+
+</body>
+</html>
